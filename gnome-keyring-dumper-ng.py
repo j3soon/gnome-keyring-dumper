@@ -11,6 +11,7 @@ def hackng():
             if item.is_locked():
                 item.unlock()
             attr = item.get_attributes()
+            print(f'  {attr}')
             if attr and 'username_value' in attr:
                 print('[%s] %s: %s = %s' % (
                     keyring.get_label(),
